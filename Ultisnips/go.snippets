@@ -1,0 +1,67 @@
+snippet checke "Check Error"
+if err != nil {
+	return err
+}
+${0}
+endsnippet
+
+snippet forr "For loop range"
+for _, ${1:thing} := range ${2:things} {
+	${3://TODO}
+}
+endsnippet
+
+snippet fori "For loop i"
+for ${1:i} := ${2:0}; i < ${3:n}; i++ {
+	${4://TODO}
+}
+endsnippet
+
+snippet ie "Check Error"
+if err != nil {
+	panic(err)
+}
+${0}
+endsnippet
+
+snippet fn "Println"
+fmt.Println(${1})${0}
+endsnippet
+
+snippet ff "Printf"
+fmt.Println(${1})${0}
+endsnippet
+
+snippet ln "log.Println"
+log.Println(${1})${0}
+endsnippet
+
+snippet lf "log.Println"
+log.Println(${1})${0}
+endsnippet
+
+snippet start "Starting code"
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	${0}
+}
+endsnippet
+
+snippet cq "Current Question"
+app.result.questions[app.curResultIndex]${0}
+endsnippet
+
+snippet errp "err print"
+if err != nil {
+	panic(${0})
+}
+endsnippet
+
+snippet tag "Add tag"
+\`${1:type}:"${2:tag}"\`${0}
+endsnippet
