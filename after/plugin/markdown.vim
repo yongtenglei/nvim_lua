@@ -14,7 +14,7 @@ let g:vim_markdown_toc_autofit = 1
 let g:vim_markdown_emphasis_multiline = 1
 
 "concealing
-set conceallevel=2
+set conceallevel=0
 " allowing code block concealing
 let g:vim_markdown_conceal_code_blocks = 1
 " cs as csharp and py as python

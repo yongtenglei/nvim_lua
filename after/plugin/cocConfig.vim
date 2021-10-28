@@ -30,6 +30,7 @@ let g:coc_global_extensions = [
   \ 'coc-yank',
   \ 'coc-pairs',
   \ 'coc-html',
+  \ 'coc-diagnostic',
   \ 'coc-htmldjango',
   \ 'coc-htmlhint',
   \ 'coc-html-css-support',
@@ -37,6 +38,7 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-java',
   \ 'coc-db',
+  \ 'coc-calc',
   \ 'coc-markdownlint']
 
 set hidden
@@ -68,11 +70,10 @@ else
 endif
 
 
-" Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
 nnoremap <silent><nowait> <LEADER>d :CocList diagnostics<cr>
-nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
-nmap <silent> <LEADER>=<Plug>(coc-diagnostic-next)
+"nmap <silent> <LEADER>- <Plug>(coc-diagnostic-prev)
+"nmap <silent> <LEADER>=<Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -125,4 +126,3 @@ nmap ts <Plug>(coc-translator-p)
 
 " coc-yank
 nnoremap <silent> <leader>y :<C-u>CocList -A --normal yank<cr>
-
