@@ -74,7 +74,7 @@ endfunc
 
 " html config
 " let g:mkdp_browser="firefox"
-let g:mkdp_browser="waterfox-g3"
+let g:mkdp_browser="waterfox"
 
 " markdown snippets
 source ~/.config/nvim/md-snippets.vim

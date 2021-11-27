@@ -16,7 +16,7 @@ let g:mkdp_open_to_the_world = 0
 let g:mkdp_open_ip = ''
 " specify browser to open preview page
 " default: ''
-let g:mkdp_browser = 'waterfox-g3'
+let g:mkdp_browser = 'waterfox'
 " set to 1, echo preview page url in command line when open preview page
 let g:mkdp_echo_preview_url = 0
 " a custom vim function name to open preview page

@@ -9,6 +9,8 @@ autocmd Filetype markdown inoremap <buffer> ,d `` <++><Esc>F`i
 autocmd Filetype markdown inoremap <buffer> ,c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
 autocmd Filetype markdown inoremap <buffer> ,m - [ ]
 autocmd Filetype markdown inoremap <buffer> ,p ![](<++>) <++><Esc>F[a
+autocmd Filetype markdown inoremap <buffer> ,q <div align=center><img src=""><Enter><Enter><++><ESC>2k^f"a
+autocmd Filetype markdown inoremap <buffer> ,x <div align=center><Enter><Enter><++><Enter><Enter></div><Enter><Enter><++><ESC>4k0c$
 autocmd Filetype markdown inoremap <buffer> ,a [](<++>) <++><Esc>F[a
 autocmd Filetype markdown inoremap <buffer> ,1 #<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap <buffer> ,2 ##<Space><Enter><++><Esc>kA

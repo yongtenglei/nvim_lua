@@ -6,6 +6,7 @@ runtime ./settings/common.vim
 lua require('plugins')
 
 source ~/.config/nvim/after/plugin/lf.vim
+source ~/.config/nvim/after/plugin/vimtex.vim
 source  ~/.config/nvim/settings/go_config.vim
 
 " 按键映射

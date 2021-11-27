@@ -140,10 +140,14 @@ set shell=/bin/bash
 " ===
 
 "term cursor
+
 if has('nvim')
   highlight! link TermCursor Cursor
   highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
 endif
+
+highlight Normal guibg=NONE ctermbg=None
 
 "windows motion
 if has('nvim')

@@ -3,8 +3,8 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-	 --fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})	--默认地址
-	fn.system({'git', 'clone', '--depth', '1', 'https://codechina.csdn.net/mirrors/wbthomason/packer.nvim.git', install_path})	--csdn加速镜像
+   --fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})	--默认地址
+  fn.system({'git', 'clone', '--depth', '1', 'https://codechina.csdn.net/mirrors/wbthomason/packer.nvim.git', install_path})	--csdn加速镜像
 	vim.cmd 'packadd packer.nvim'
 end
 -- Only required if you have packer configured as `opt`
@@ -106,7 +106,7 @@ use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'Mark
 	config = {
 		max_jobs = 16,
 		git = {
-			default_url_format = 'https://hub.fastgit.org/%s'
+			--default_url_format = 'https://hub.fastgit.org/%s'
 		},
 		display = {
 			open_fn = function()

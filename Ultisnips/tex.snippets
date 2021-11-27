@@ -1,3 +1,27 @@
+snippet Art "begin article"
+% !TeX program = xelatex
+\documentclass[11pt]{article}
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setCJKmonofont{WenQuanYi Zen Hei Mono}
+
+\title{${1}}
+\author{${2}}
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+%\clearpage
+
+\section{${3}}
+${0}
+
+\end{document}
+
+
+endsnippet
 # snip
 snippet mid "\mid \mid"
 	\\mid ${1} \\mid ${0}
@@ -74,4 +98,3 @@ while True:
 snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
 `{$1}$0
 endsnippet
-
