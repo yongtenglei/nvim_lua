@@ -1,6 +1,13 @@
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='onedark'
+
+" onedark
+"let g:airline_theme='onedark'
+
+" shades_of_purple
+let g:shades_of_purple_airline = 1
+let g:airline_theme='shades_of_purple'
+
 " 使用字体
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1

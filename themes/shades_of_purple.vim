@@ -1,0 +1,2 @@
+syntax enable
+colorscheme shades_of_purple

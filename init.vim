@@ -20,5 +20,6 @@ source ~/.config/nvim/after/plugin/scrollstatus.vim
 " themes basic
 source ~/.config/nvim/themes/theme.nvim
 " themes
-source ~/.config/nvim/themes/onedark.vim
+"source ~/.config/nvim/themes/onedark.vim
+source ~/.config/nvim/themes/shades_of_purple.vim
 "source ~/.config/nvim/themes/gruvbox_material.vim

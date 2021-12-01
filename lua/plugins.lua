@@ -24,7 +24,8 @@ return require('packer').startup({
         }}
       -- themes
       use{'sainnhe/gruvbox-material',
-      'joshdick/onedark.vim'}
+      'joshdick/onedark.vim',
+    'Rigellute/shades-of-purple.vim'}
 
       -- vim-scrollstatus
       use{'ojroques/vim-scrollstatus'}
