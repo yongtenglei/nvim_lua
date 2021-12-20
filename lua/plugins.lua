@@ -105,6 +105,27 @@ use {'chentau/marks.nvim'}
 -- coc-nvim
 use{'neoclide/coc.nvim', branch= 'release'}
 
+-- json
+use{
+  'elzr/vim-json',
+  ft = {'json'}
+}
+
+-- docker file
+use{
+  'ekalinin/Dockerfile.vim',
+  ft = {'Dockerfile'}
+}
+
+-- toml file
+use{'cespare/vim-toml'}
+
+-- open-browser
+use{'tyru/open-browser.vim'}
+
+-- which key
+--use {"folke/which-key.nvim"}
+
 -- markdown
 use{'godlygeek/tabular'} -- requires
 use{'plasticboy/vim-markdown'}

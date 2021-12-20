@@ -57,7 +57,7 @@ end
 time([[Luarocks path setup]], false)
 time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
-  local success, result = pcall(loadstring(s))
+  local success, result = pcall(loadstring(s), name, _G.packer_plugins[name])
   if not success then
     vim.schedule(function()
       vim.api.nvim_notify('packer.nvim: Error running ' .. component .. ' for ' .. name .. ': ' .. result, vim.log.levels.ERROR, {})
@@ -73,6 +73,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/DidYouMean",
     url = "https://github.com/EinfachToll/DidYouMean"
+  },
+  ["Dockerfile.vim"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim",
+    url = "https://github.com/ekalinin/Dockerfile.vim"
   },
   ["coc.nvim"] = {
     loaded = true,
@@ -107,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["marks.nvim"] = {
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/marks.nvim",
+    url = "https://github.com/chentau/marks.nvim"
+  },
   nerdcommenter = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/nerdcommenter",
@@ -127,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/onedark.vim",
     url = "https://github.com/joshdick/onedark.vim"
   },
+  ["open-browser.vim"] = {
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/open-browser.vim",
+    url = "https://github.com/tyru/open-browser.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -146,6 +163,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/ripgrep",
     url = "https://github.com/BurntSushi/ripgrep"
+  },
+  ["rust.vim"] = {
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/rust.vim",
+    url = "https://github.com/rust-lang/rust.vim"
+  },
+  ["shades-of-purple.vim"] = {
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/shades-of-purple.vim",
+    url = "https://github.com/Rigellute/shades-of-purple.vim"
   },
   ["splitjoin.vim"] = {
     loaded = true,
@@ -197,6 +224,13 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
   },
+  ["vim-json"] = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/opt/vim-json",
+    url = "https://github.com/elzr/vim-json"
+  },
   ["vim-markdown"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-markdown",
@@ -227,6 +261,11 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-table-mode",
     url = "https://github.com/dhruvasagar/vim-table-mode"
   },
+  ["vim-toml"] = {
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-toml",
+    url = "https://github.com/cespare/vim-toml"
+  },
   ["vim-visual-multi"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
@@ -256,6 +295,25 @@ time([[Defining lazy-load commands]], true)
 pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file MarkdownPreview lua require("packer.load")({'markdown-preview.nvim'}, { cmd = "MarkdownPreview", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType Dockerfile ++once lua require("packer.load")({'Dockerfile.vim'}, { ft = "Dockerfile" }, _G.packer_plugins)]]
+vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-json'}, { ft = "json" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
+vim.cmd [[augroup filetypedetect]]
+time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]], true)
+vim.cmd [[source /home/rey/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]]
+time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/vim-json/ftdetect/json.vim]], false)
+time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/Dockerfile.vim]], true)
+vim.cmd [[source /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/Dockerfile.vim]]
+time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/Dockerfile.vim]], false)
+time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/docker-compose.vim]], true)
+vim.cmd [[source /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/docker-compose.vim]]
+time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/docker-compose.vim]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)
