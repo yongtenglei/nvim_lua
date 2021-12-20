@@ -45,6 +45,11 @@ func! CompileRunGcc()
     :sp
     :res -5
     term javac % && time java %<
+  elseif &filetype == 'rust'
+    set splitbelow
+    :sp
+    :res -5
+    term cargo run
   elseif &filetype == 'sh'
     :!time bash %
   elseif &filetype == 'python'

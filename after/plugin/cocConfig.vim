@@ -39,6 +39,7 @@ let g:coc_global_extensions = [
   \ 'coc-java',
   \ 'coc-db',
   \ 'coc-calc',
+  \ 'coc-rust-analyzer',
   \ 'coc-markdownlint']
 
 set hidden

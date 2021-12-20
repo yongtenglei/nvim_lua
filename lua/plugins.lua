@@ -75,6 +75,9 @@ use{'mhinz/vim-startify'}
 use{'fatih/vim-go',  run = ':GoInstallBinaried'}
 use{'AndrewRadev/splitjoin.vim'}
 
+-- vim-rust
+use{'rust-lang/rust.vim'}
+
 -- vim-surround
 use{'tpope/vim-surround'}
 
@@ -95,6 +98,9 @@ use{'voldikss/vim-floaterm'}
 
 -- Did you mean
 use{'EinfachToll/DidYouMean'}
+
+--marks
+use {'chentau/marks.nvim'}
 
 -- coc-nvim
 use{'neoclide/coc.nvim', branch= 'release'}
