@@ -9,48 +9,71 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
+
 return require('packer').startup({
 	function()
-		use{
-      'wbthomason/packer.nvim'}-- Packer can manage itself
+use{
+'wbthomason/packer.nvim'}-- Packer can manage itself
 
-      -- air line
-      use{'vim-airline/vim-airline',
-        requires = {
-          'vim-airline/vim-airline-themes',
-          --综合图标支持such vim-airline lightline, vim-startify
-          -- 'ryanoasis/vim-devicons',
-          'kyazdani42/nvim-web-devicons'
-        }}
-      -- themes
-      use{'sainnhe/gruvbox-material',
-      'joshdick/onedark.vim',
-    'Rigellute/shades-of-purple.vim',
-      'rebelot/kanagawa.nvim'}
+-- air line
+--use{'vim-airline/vim-airline',
+--requires = {
+--'vim-airline/vim-airline-themes',
+----综合图标支持such vim-airline lightline, vim-startify
+---- 'ryanoasis/vim-devicons',
+--'kyazdani42/nvim-web-devicons'
+--}}
 
-      -- vim-scrollstatus
-      use{'ojroques/vim-scrollstatus'}
+-- vim-scrollstatus (for airline)
+--use{'ojroques/vim-scrollstatus'}
 
-      -- telescote.nvim
-      use{'BurntSushi/ripgrep'} --requires
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    } -- requires
-use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- requires
-      use {
-  'nvim-telescope/telescope.nvim',
-  requires = { {'nvim-lua/plenary.nvim'} }
+-- lualine
+use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
-  -- html css javascript
-  use {'gko/vim-coloresque'}
-  use {'mattn/emmet-vim'}
+-- themes
+use{'sainnhe/gruvbox-material',
+'joshdick/onedark.vim',
+'Rigellute/shades-of-purple.vim',
+'rebelot/kanagawa.nvim'}
+
+
+-- telescote.nvim
+-- install modlue
+-- TSInstall bash c cmake cpp css dockerfile go  gomod html http json latex lua make python rust vim vue yaml toml
+use{'BurntSushi/ripgrep'} --requires
+use {
+'nvim-treesitter/nvim-treesitter',
+run = ':TSUpdate'
+}
+-- requires
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' } -- requires
+use {
+'nvim-telescope/telescope.nvim',
+requires = { {'nvim-lua/plenary.nvim'} }
+}
+
+-- tabline.nvim
+use {
+  'kdheepak/tabline.nvim',
+  config = function()
+    vim.cmd[[
+      set guioptions-=e " Use showtabline in gui vim
+      set sessionoptions+=tabpages,globals " store tabpages and globals in session
+    ]]
+  end
+}
+
+-- html css javascript
+use {'gko/vim-coloresque'}
+use {'mattn/emmet-vim'}
 
   -- table mode
 use {'dhruvasagar/vim-table-mode'}
 
---suda.vim
+-- suda.vim
 use {'lambdalisue/suda.vim'}
 
 -- snippets
@@ -131,6 +154,7 @@ use{'tyru/open-browser.vim'}
 use{'godlygeek/tabular'} -- requires
 use{'plasticboy/vim-markdown'}
 use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+
 	end,
 	config = {
 		max_jobs = 16,
