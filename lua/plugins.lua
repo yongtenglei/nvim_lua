@@ -56,15 +56,18 @@ requires = { {'nvim-lua/plenary.nvim'} }
 }
 
 -- tabline.nvim
-use {
-  'kdheepak/tabline.nvim',
-  config = function()
-    vim.cmd[[
-      set guioptions-=e " Use showtabline in gui vim
-      set sessionoptions+=tabpages,globals " store tabpages and globals in session
-    ]]
-  end
-}
+--use {
+  --'kdheepak/tabline.nvim',
+  --config = function()
+    --vim.cmd[[
+      --set guioptions-=e " Use showtabline in gui vim
+      --set sessionoptions+=tabpages,globals " store tabpages and globals in session
+    --]]
+  --end
+--}
+
+-- bufferline.nvim
+use {'akinsho/bufferline.nvim'}
 
 -- html css javascript
 use {'gko/vim-coloresque'}

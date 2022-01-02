@@ -8,6 +8,8 @@ lua require('plugins')
 lua require('lualine_init')
 " buffer line
 lua require('bufferline_init')
+" tab line
+"lua require('tabline_init')
 " marks
 lua require('marks_init')
 " indent_blankline
@@ -21,7 +23,7 @@ source ~/.config/nvim/after/plugin/vimtex.vim
 source  ~/.config/nvim/settings/go_config.vim
 
 " 按键映射
-runtime ./settings/maps.nvim
+runtime ./settings/maps.vim
 
 " useful thing
 source ~/.config/nvim/settings/useful.vim

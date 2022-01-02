@@ -81,6 +81,11 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim",
     url = "https://github.com/ekalinin/Dockerfile.vim"
   },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/coc.nvim",
@@ -179,11 +184,6 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
   },
-  ["scrollbar.nvim"] = {
-    loaded = true,
-    path = "/home/rey/.local/share/nvim/site/pack/packer/start/scrollbar.nvim",
-    url = "https://github.com/Xuyuanp/scrollbar.nvim"
-  },
   ["shades-of-purple.vim"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/shades-of-purple.vim",
@@ -198,12 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/suda.vim",
     url = "https://github.com/lambdalisue/suda.vim"
-  },
-  ["tabline.nvim"] = {
-    config = { '\27LJ\1\2±\1\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0‘\1      set guioptions-=e " Use showtabline in gui vim\n      set sessionoptions+=tabpages,globals " store tabpages and globals in session\n    \bcmd\bvim\0' },
-    loaded = true,
-    path = "/home/rey/.local/share/nvim/site/pack/packer/start/tabline.nvim",
-    url = "https://github.com/kdheepak/tabline.nvim"
   },
   tabular = {
     loaded = true,
@@ -295,10 +289,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: tabline.nvim
-time([[Config for tabline.nvim]], true)
-try_loadstring('\27LJ\1\2±\1\0\0\2\0\3\0\0054\0\0\0007\0\1\0%\1\2\0>\0\2\1G\0\1\0‘\1      set guioptions-=e " Use showtabline in gui vim\n      set sessionoptions+=tabpages,globals " store tabpages and globals in session\n    \bcmd\bvim\0', "config", "tabline.nvim")
-time([[Config for tabline.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
