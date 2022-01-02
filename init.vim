@@ -10,8 +10,12 @@ lua require('lualine_init')
 lua require('bufferline_init')
 " marks
 lua require('marks_init')
+" indent_blankline
+lua require('indent_blankline_init')
 
 
+"source ~/.config/nvim/after/plugin/minimap.vim
+"source ~/.config/nvim/after/plugin/scrollbar.vim
 source ~/.config/nvim/after/plugin/lf.vim
 source ~/.config/nvim/after/plugin/vimtex.vim
 source  ~/.config/nvim/settings/go_config.vim
@@ -23,7 +27,7 @@ runtime ./settings/maps.nvim
 source ~/.config/nvim/settings/useful.vim
 
 source ~/.config/nvim/after/plugin/rainbow_parentheses.vim
-source ~/.config/nvim/after/plugin/scrollstatus.vim
+"source ~/.config/nvim/after/plugin/scrollstatus.vim
 
 
 " themes basic

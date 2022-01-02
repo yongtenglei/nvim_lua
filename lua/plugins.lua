@@ -106,7 +106,8 @@ use{'rust-lang/rust.vim'}
 use{'tpope/vim-surround'}
 
 -- indent line
-use{'Yggdroot/indentLine'}
+--use{'Yggdroot/indentLine'}
+use "lukas-reineke/indent-blankline.nvim"
 
 -- rainbow parentheses
 use{'luochen1990/rainbow'}
@@ -149,6 +150,15 @@ use{'tyru/open-browser.vim'}
 
 -- which key
 --use {"folke/which-key.nvim"}
+
+-- minimap.vim
+--use{
+  --'wfxr/minimap.vim',
+  --run = 'cargo install --locked code-minimap'
+--}
+
+-- scrollbar (the same motivation as minimap)
+--use {'Xuyuanp/scrollbar.nvim'}
 
 -- markdown
 use{'godlygeek/tabular'} -- requires
