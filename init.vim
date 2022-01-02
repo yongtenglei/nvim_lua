@@ -23,3 +23,4 @@ source ~/.config/nvim/themes/theme.nvim
 "source ~/.config/nvim/themes/onedark.vim
 source ~/.config/nvim/themes/shades_of_purple.vim
 "source ~/.config/nvim/themes/gruvbox_material.vim
+"source ~/.config/nvim/themes/kanagawa.vim
