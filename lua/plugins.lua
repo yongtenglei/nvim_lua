@@ -148,8 +148,11 @@ use{
 -- toml file
 use{'cespare/vim-toml'}
 
--- open-browser
-use{'tyru/open-browser.vim'}
+-- open-browser for plantuml
+-- need install graphviz
+use{'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'}
+use {'sheerun/vim-polyglot', ft = {'plantuml', 'markdown'}}
+use {'weirongxu/plantuml-previewer.vim', ft = {'plantuml'}, event = 'BufEnter'}
 
 -- which key
 --use {"folke/which-key.nvim"}
@@ -166,7 +169,8 @@ use{'tyru/open-browser.vim'}
 -- markdown
 use{'godlygeek/tabular'} -- requires
 use{'plasticboy/vim-markdown'}
-use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+--use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install', cmd = 'MarkdownPreview'}
+use {'iamcco/markdown-preview.nvim', run = 'cd app && yarn install'}
 
 	end,
 	config = {

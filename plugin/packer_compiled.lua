@@ -122,11 +122,8 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
-    commands = { "MarkdownPreview" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/home/rey/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    loaded = true,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/start/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["marks.nvim"] = {
@@ -155,14 +152,23 @@ _G.packer_plugins = {
     url = "https://github.com/joshdick/onedark.vim"
   },
   ["open-browser.vim"] = {
-    loaded = true,
-    path = "/home/rey/.local/share/nvim/site/pack/packer/start/open-browser.vim",
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/opt/open-browser.vim",
     url = "https://github.com/tyru/open-browser.vim"
   },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plantuml-previewer.vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/opt/plantuml-previewer.vim",
+    url = "https://github.com/weirongxu/plantuml-previewer.vim"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -241,6 +247,13 @@ _G.packer_plugins = {
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-markdown",
     url = "https://github.com/plasticboy/vim-markdown"
   },
+  ["vim-polyglot"] = {
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/rey/.local/share/nvim/site/pack/packer/opt/vim-polyglot",
+    url = "https://github.com/sheerun/vim-polyglot"
+  },
   ["vim-snippets"] = {
     loaded = true,
     path = "/home/rey/.local/share/nvim/site/pack/packer/start/vim-snippets",
@@ -289,19 +302,19 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
-
--- Command lazy-loads
-time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file MarkdownPreview lua require("packer.load")({'markdown-preview.nvim'}, { cmd = "MarkdownPreview", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
-time([[Defining lazy-load commands]], false)
-
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-json'}, { ft = "json" }, _G.packer_plugins)]]
+vim.cmd [[au FileType plantuml ++once lua require("packer.load")({'plantuml-previewer.vim', 'open-browser.vim', 'vim-polyglot'}, { ft = "plantuml" }, _G.packer_plugins)]]
 vim.cmd [[au FileType Dockerfile ++once lua require("packer.load")({'Dockerfile.vim'}, { ft = "Dockerfile" }, _G.packer_plugins)]]
+vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-polyglot'}, { ft = "markdown" }, _G.packer_plugins)]]
+vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-json'}, { ft = "json" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au BufEnter * ++once lua require("packer.load")({'plantuml-previewer.vim', 'open-browser.vim'}, { event = "BufEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
 time([[Sourcing ftdetect script at: /home/rey/.local/share/nvim/site/pack/packer/opt/Dockerfile.vim/ftdetect/Dockerfile.vim]], true)

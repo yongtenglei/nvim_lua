@@ -74,6 +74,8 @@ func! CompileRunGcc()
     set splitbelow
     :sp
     :term go run .
+  elseif &filetype == 'plantuml'
+    exec "PlantumlOpen"
   endif
 endfunc
 
@@ -96,3 +98,6 @@ source ~/.config/nvim/md-snippets.vim
 
   " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
+
+" filetype for plantuml
+autocmd BufNewFile,BufRead *.puml set filetype=plantuml

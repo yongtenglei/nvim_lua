@@ -57,4 +57,4 @@ set updatetime=100
 
 "let g:go_auto_sameids = 1
 
-let g:go_play_browser_command = "firefox"
+let g:go_play_browser_command = "waterfox"
