@@ -101,3 +101,13 @@ source ~/.config/nvim/md-snippets.vim
 
 " filetype for plantuml
 autocmd BufNewFile,BufRead *.puml set filetype=plantuml
+
+" refresh buffers
+function! RefreshBuf()
+    " code
+    set noconfirm
+    bufdo e!
+    set confirm
+endfunction
+
+nmap <leader>rb :call RefreshBuf()<CR>
