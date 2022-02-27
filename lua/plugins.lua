@@ -151,8 +151,8 @@ use{'cespare/vim-toml'}
 -- open-browser for plantuml
 -- need install graphviz
 use{'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'}
-use {'sheerun/vim-polyglot', ft = {'plantuml', 'markdown'}}
-use {'weirongxu/plantuml-previewer.vim', ft = {'plantuml'}, event = 'BufEnter'}
+--use {'sheerun/vim-polyglot', ft = {'plantuml', 'markdown'}}
+--use {'weirongxu/plantuml-previewer.vim', ft = {'plantuml'}, event = 'BufEnter'}
 
 -- which key
 --use {"folke/which-key.nvim"}
