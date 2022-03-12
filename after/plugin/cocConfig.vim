@@ -10,7 +10,6 @@ let g:coc_global_extensions = [
   \ 'coc-import-cost',
   \ 'coc-json',
   \ 'coc-lists',
-  \ 'coc-go',
   \ 'coc-prettier',
   \ 'coc-prisma',
   \ 'coc-pyright',
@@ -41,6 +40,8 @@ let g:coc_global_extensions = [
   \ 'coc-calc',
   \ 'coc-rust-analyzer',
   \ 'coc-markdownlint']
+  "\ 'coc-go',
+
 
 set hidden
 

@@ -106,7 +106,7 @@ autocmd BufNewFile,BufRead *.puml set filetype=plantuml
 function! RefreshBuf()
     " code
     set noconfirm
-    bufdo e!
+    bufdo e !
     set confirm
 endfunction
 

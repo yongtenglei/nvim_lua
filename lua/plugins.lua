@@ -148,6 +148,9 @@ use{
 -- toml file
 use{'cespare/vim-toml'}
 
+-- vim transparent
+use { 'xiyaowong/nvim-transparent' }
+
 -- open-browser for plantuml
 -- need install graphviz
 use{'tyru/open-browser.vim', ft = {'plantuml'}, event = 'BufEnter'}

@@ -58,3 +58,15 @@ set updatetime=100
 "let g:go_auto_sameids = 1
 
 let g:go_play_browser_command = "waterfox"
+
+
+" work with coc-nvim
+"let g:go_def_mapping_enabled=0  " let coc.nvim handle
+"let g:go_gopls_enabled=1 " still needed for GoInfo hover (g:go_auto_type_info)
+"let g:go_gopls_options=['-remote=auto']
+
+let g:go_gopls_enabled = 1
+let g:go_gopls_options = ['-remote=auto']
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_referrers_mode = 'gopls'

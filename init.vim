@@ -14,6 +14,8 @@ lua require('bufferline_init')
 lua require('marks_init')
 " indent_blankline
 lua require('indent_blankline_init')
+" transparent
+lua require('transparent_init')
 
 
 "source ~/.config/nvim/after/plugin/minimap.vim
