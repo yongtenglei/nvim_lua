@@ -17,7 +17,6 @@ lua require('indent_blankline_init')
 " transparent
 lua require('transparent_init')
 
-
 "source ~/.config/nvim/after/plugin/minimap.vim
 "source ~/.config/nvim/after/plugin/scrollbar.vim
 source ~/.config/nvim/after/plugin/lf.vim

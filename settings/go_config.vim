@@ -65,8 +65,8 @@ let g:go_play_browser_command = "waterfox"
 "let g:go_gopls_enabled=1 " still needed for GoInfo hover (g:go_auto_type_info)
 "let g:go_gopls_options=['-remote=auto']
 
-let g:go_gopls_enabled = 1
-let g:go_gopls_options = ['-remote=auto']
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_referrers_mode = 'gopls'
+"let g:go_gopls_enabled = 1
+"let g:go_gopls_options = ['-remote=auto']
+"let g:go_def_mode='gopls'
+"let g:go_info_mode='gopls'
+"let g:go_referrers_mode = 'gopls'

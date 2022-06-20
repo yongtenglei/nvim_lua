@@ -147,5 +147,9 @@
     "]c": "gitNext",
     "<<": "gitStage",
     ">>": "gitUnstage"
-  }
+  },
+  "coc.source.vimtex.filetypes": [
+    "tex",
+    "plaintex"
+  ]
 }

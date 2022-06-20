@@ -91,7 +91,9 @@ noremap tmi :+tabmove<CR>
 
 set mouse=a
 set encoding=utf-8
-set guifont=DejaVu_Sans_Mono_Font
+"set guifont=DejaVu_Sans_Mono_Font
+"set guifont=Fira_Code_Font
+set guifont=Cascadia_Code_PL
 set showmatch
 let &t_ut=''
 set expandtab
