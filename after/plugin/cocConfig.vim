@@ -39,8 +39,8 @@ let g:coc_global_extensions = [
   \ 'coc-db',
   \ 'coc-calc',
   \ 'coc-rust-analyzer',
+  \ 'coc-go',
   \ 'coc-markdownlint']
-  "\ 'coc-go',
 
 
 set hidden

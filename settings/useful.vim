@@ -81,7 +81,7 @@ endfunc
 
 " html config
 " let g:mkdp_browser="firefox"
-let g:mkdp_browser="waterfox"
+let g:mkdp_browser="google-chrome-stable"
 
 " markdown snippets
 source ~/.config/nvim/md-snippets.vim

@@ -57,7 +57,7 @@ set updatetime=100
 
 "let g:go_auto_sameids = 1
 
-let g:go_play_browser_command = "waterfox"
+let g:go_play_browser_command = "google-chrome-stable"
 
 
 " work with coc-nvim

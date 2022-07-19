@@ -97,7 +97,7 @@ return require('packer').startup({
     use {'EinfachToll/DidYouMean'}
 
     --marks
-    use {'chentau/marks.nvim'}
+    use {'chentoast/marks.nvim'}
 
     -- coc-nvim
     use {'neoclide/coc.nvim', branch= 'release'}

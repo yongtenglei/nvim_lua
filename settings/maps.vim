@@ -9,6 +9,8 @@ noremap <c-u> :w<ESC>
 " For ESC in insert mode
 inoremap <c-u> <ESC>
 
+" Quick quit
+noremap Q :q!<Enter>
 
 " Undo operations
 noremap l u
